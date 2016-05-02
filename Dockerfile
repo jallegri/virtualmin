@@ -5,14 +5,11 @@ MAINTAINER Jonatan Allegrini <jallegri@gmail.com>
 # Set password to 'admin'
 RUN printf admin\\nadmin\\n | passwd
 
-RUN yum install -y wget perl
+RUN yum install -y wget perl && \
+    wget http://software.virtualmin.com/gpl/scripts/install.sh && \
+    yum clean all
 
-RUN wget http://software.virtualmin.com/gpl/scripts/install.sh && \
-    sh install.sh -f --hostname $(hostname -f).net
-
-RUN yum clean all
-
-ENTRYPOINT /etc/webmin/start
+RUN sh install.sh -f --hostname $(hostname -f).net
 
 EXPOSE 80
 EXPOSE 443
