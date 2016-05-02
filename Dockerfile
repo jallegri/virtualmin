@@ -5,7 +5,7 @@ MAINTAINER Jonatan Allegrini <jallegri@gmail.com>
 # Set password to 'admin'
 RUN printf admin\\nadmin\\n | passwd
 
-RUN yum install -y wget perl && \
+RUN yum install -y wget perl iputils && \
     wget http://software.virtualmin.com/gpl/scripts/install.sh && \
     yum clean all
 
