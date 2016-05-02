@@ -1,12 +1,18 @@
-FROM debian:jessie
+FROM centos:6
 
 MAINTAINER Jonatan Allegrini <jallegri@gmail.com>
 
-RUN apt-get update
-RUN apt-get install -y --no-install-recommends wget
-RUN wget http://software.virtualmin.com/gpl/scripts/install.sh
-RUN sh install.sh -f --hostname $(hostname -f).net
+# Set password to 'admin'
+RUN printf admin\\nadmin\\n | passwd
 
-EXPOSE 80 443
+RUN yum install -y wget
+
+RUN wget http://software.virtualmin.com/gpl/scripts/install.sh && \
+    sh install.sh -f --hostname $(hostname -f).net
+
+RUN yum clean all
 
 ENTRYPOINT /etc/webmin/start
+
+EXPOSE 80
+EXPOSE 443
