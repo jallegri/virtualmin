@@ -1,15 +1,10 @@
-FROM centos:6
+FROM debian:jessie
 
 MAINTAINER Jonatan Allegrini <jallegri@gmail.com>
 
-# Set password to 'admin'
-RUN printf admin\\nadmin\\n | passwd
+RUN \
+    apt-get update && \
+    apt-get install -y --no-install-recommends wget && \
+    wget http://software.virtualmin.com/gpl/scripts/install.sh
 
-RUN yum install -y wget perl iputils && \
-    wget http://software.virtualmin.com/gpl/scripts/install.sh && \
-    yum clean all
-
-RUN sh install.sh -f --hostname $(hostname -f).net
-
-EXPOSE 80
-EXPOSE 443
+RUN sh install.sh -f -host $(hostname -f).net
