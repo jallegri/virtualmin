@@ -19,3 +19,4 @@ EXPOSE 53/udp 53/tcp
 CMD ["/etc/webmin/start"]
 
 ENTRYPOINT ["/bin/bash"]
+
