@@ -1,5 +1,7 @@
 ### Virtualmin installed over Centos 6 (AMD64)
 
+[![](https://images.microbadger.com/badges/image/jallegri/virtualmin.svg)](https://microbadger.com/images/jallegri/virtualmin "Get your own image badge on microbadger.com")
+
 #### To run in docker:
 docker run --name <name> [--net=<net>] -tid jallegri/virtualmin
 
