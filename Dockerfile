@@ -17,4 +17,5 @@ EXPOSE 80 443 21 20 110 143
 EXPOSE 53/udp 53/tcp
 
 CMD ["/etc/webmin/start"]
-CMD ["tail -f /dev/null"]
+
+ENTRYPOINT ["tail -F /dev/null"]
