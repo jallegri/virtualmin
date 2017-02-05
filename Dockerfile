@@ -1,3 +1,4 @@
+#change the from to jallegri/virtualmin:base
 FROM centos:6
 
 MAINTAINER Jonatan Allegrini <jallegri@gmail.com>
