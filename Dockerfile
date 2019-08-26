@@ -18,4 +18,4 @@ EXPOSE 53/udp 53/tcp
 
 #CMD ["/etc/webmin/start"]
 
-#ENTRYPOINT ["bash"]
+ENTRYPOINT ["tail -F /var/log/messages"]
