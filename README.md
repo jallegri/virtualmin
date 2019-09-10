@@ -1,8 +1,6 @@
 ### Virtualmin installed over Centos 6 (AMD64)
 
-[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/3171/badge)](https://bestpractices.coreinfrastructure.org/projects/3171)
-
-[![](https://images.microbadger.com/badges/image/jallegri/virtualmin.svg)](https://microbadger.com/images/jallegri/virtualmin "Get your own image badge on microbadger.com")
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/3171/badge)](https://bestpractices.coreinfrastructure.org/projects/3171)  [![](https://images.microbadger.com/badges/image/jallegri/virtualmin.svg)](https://microbadger.com/images/jallegri/virtualmin "Get your own image badge on microbadger.com")
 
 #### To run in docker:
 docker run --name <name> [--net=<net>] -tid jallegri/virtualmin
