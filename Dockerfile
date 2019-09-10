@@ -8,7 +8,7 @@ RUN printf admin\\nadmin\\n | passwd
 RUN yum install -y wget perl iputils && \
     wget http://software.virtualmin.com/gpl/scripts/install.sh && \
 #    yum clean all
-    sh install.sh --minimal && \
+    sh install.sh --minimal -f && \
 #
 #RUN sh install.sh -f --hostname $(hostname -f).net && \
     yum clean all
